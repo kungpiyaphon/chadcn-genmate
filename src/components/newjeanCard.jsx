@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 export default function NewjeanCard({ name, role, profileImage, buy }) {
   return (
@@ -16,7 +17,7 @@ export default function NewjeanCard({ name, role, profileImage, buy }) {
         <Button className="w-2/3" onClick={buy}>
           Buy
         </Button>
-        <Button variant="ghost" className="w-1/3">
+        <Button variant="ghost" onClick={() => toast.message("Selling Your item", { description: "please wait for server" })} className="w-1/3">
           Sell
         </Button>
       </CardFooter>

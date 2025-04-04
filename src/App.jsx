@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 function App() {
   function onBuy() {
-    toast("Item added to cart");
+    toast.message("Added item", { description: "checkout your cart" });
   }
 
   return (
