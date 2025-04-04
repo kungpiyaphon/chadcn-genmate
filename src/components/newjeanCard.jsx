@@ -10,7 +10,7 @@ export default function NewjeanCard({ name, role, profileImage, buy }) {
         <CardDescription>{role}</CardDescription>
       </CardHeader>
       <CardContent>
-        <img src={profileImage} className="w-auto h-68 rounded-3xl transition hover:scale-125 duration-700" />
+        <img src={profileImage} className="w-auto h-68 rounded-3xl transition hover:scale-125 duration-700 " />
       </CardContent>
       <CardFooter className="w-full">
         <Button className="w-2/3" onClick={buy}>

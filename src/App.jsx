@@ -15,7 +15,7 @@ function App() {
         Hello JSD9
       </Button> */}
       {/* <NewjeanCard name={newJeansMembers[0].name} role={newJeansMembers[0].role} profileImage={newJeansMembers[0].profileImage} buy={onBuy} /> */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-5 gap-4">
         {newJeansMembers.map((e) => (
           <NewjeanCard name={e.name} role={e.role} profileImage={e.profileImage} buy={onBuy} />
         ))}
