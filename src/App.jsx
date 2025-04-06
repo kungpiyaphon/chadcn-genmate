@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button";
 import "./App.css";
-import NewjeanCard from "./components/newjeanCard";
-import { newJeansMembers } from "./lib/njs";
 import { toast } from "sonner";
+import GenCCard from "./components/GenCCard";
+import { genCMembers } from "./lib/genCMembers";
 
 function App() {
-  function onBuy() {
-    toast.message("Added item", { description: "checkout your cart" });
+  function info() {
+    toast.message("Veiw info", { description: "Show info" });
   }
 
   return (
-    <div className="flex bg-blue-400 h-screen items-center justify-center w-screen">
-      {/* <Button variant="secondary" size="lg">
-        Hello JSD9
-      </Button> */}
-      {/* <NewjeanCard name={newJeansMembers[0].name} role={newJeansMembers[0].role} profileImage={newJeansMembers[0].profileImage} buy={onBuy} /> */}
+    <div className="flex flex-col bg-green-500 h-screen items-center justify-center w-screen">
+      <div className="font-bold text-9xl my-5 rounded-2xl bg-amber-300">
+      <h1>Genmate C</h1>
+
+      </div>
       <div className="grid grid-cols-5 gap-4">
-        {newJeansMembers.map((e) => (
-          <NewjeanCard name={e.name} role={e.role} profileImage={e.profileImage} buy={onBuy} />
+        {genCMembers.map((e) => (
+          <GenCCard name={e.name} number={e.number} profileImage={e.profileImage} info={info} />
         ))}
       </div>
     </div>
